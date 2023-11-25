@@ -12,12 +12,10 @@ Output: yes
 '''
 
 def checkNum(n):
-    if n == 2:
-        return "yes"
-    if n % 2 == 1:
-        return "yes"
-    else:
-        return "no"
+    for div in range(2, n):
+        if n % div == 0:
+            return False
+    return True
     
 userNum = int(input("Введите число: "))
 print(checkNum(userNum))
